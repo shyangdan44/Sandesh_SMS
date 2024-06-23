@@ -2,6 +2,7 @@
 using Sandesh_SMS.Data;
 using Sandesh_SMS.Models;
 using Sandesh_SMS.ViewModels;
+using System.Linq.Expressions;
 
 namespace Sandesh_SMS.Repositories
 {
@@ -48,6 +49,7 @@ namespace Sandesh_SMS.Repositories
 
             return classViewModels;
         }
+
         public async Task<ClassViewModel> GetByIdAsync(int id)
         {
             var Clas = await _dbContext.Classes.FindAsync(id);

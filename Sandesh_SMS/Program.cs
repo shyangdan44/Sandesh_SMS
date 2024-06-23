@@ -1,8 +1,7 @@
-using Microsoft.EntityFrameworkCore;
 using Sandesh_SMS.Data;
 using Sandesh_SMS.Repositories;
-using Sandesh_SMS.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,8 +48,8 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
-using (var scope = app.Services.CreateScope())
-{
-    await DbSeeder.SeedRolesAndAdminAsync(scope.ServiceProvider);
-}
+//using (var scope = app.Services.CreateScope())
+//{
+//    await DbSeeder.SeedRolesAndAdminAsync(scope.ServiceProvider);
+//}
 app.Run();

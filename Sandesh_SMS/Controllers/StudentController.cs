@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Sandesh_SMS.Data;
 using Sandesh_SMS.Models;
 using Sandesh_SMS.Repositories;
@@ -18,7 +19,8 @@ namespace Sandesh_SMS.Controllers
         private readonly IWebHostEnvironment _webHostEnvironment;
 
         //Dependency injection
-        public StudentController(IStudentRepository studentRepository, AppDbContext dbContext, IWebHostEnvironment webHostEnvironment)
+        public StudentController(IStudentRepository studentRepository,
+            AppDbContext dbContext, IWebHostEnvironment webHostEnvironment)
         {
             _studentRepository = studentRepository;
             _dbContext = dbContext;
@@ -89,7 +91,7 @@ namespace Sandesh_SMS.Controllers
         //GET: Student/Add
         [Authorize(Roles = "Admin")]
         [HttpGet]
-        public async Task<IActionResult> Add()
+        public async  Task<IActionResult> Add(int Id)
         {
             var classes = await _studentRepository.GetAllClasses();
             var courses = await _studentRepository.GetAllCourses();

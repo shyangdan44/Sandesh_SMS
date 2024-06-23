@@ -7,10 +7,6 @@ namespace Sandesh_SMS.ViewModels
 {
     public class StudentViewModel
     {
-        public StudentViewModel()
-        {
-            
-        }
         public int StudentId { get; set; }
 
         [Required(ErrorMessage = "First name is required.")]

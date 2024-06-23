@@ -1,4 +1,7 @@
-﻿namespace Sandesh_SMS.ViewModels
+﻿using Sandesh_SMS.ViewModels;
+using System.Linq.Expressions;
+
+namespace Sandesh_SMS.Repositories
 {
     public interface ICourseRepository
     {
