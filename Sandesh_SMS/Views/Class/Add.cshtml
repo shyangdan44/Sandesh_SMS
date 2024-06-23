@@ -1,0 +1,24 @@
+﻿@model ClassViewModel
+@{
+    ViewData["Title"] = "Add new Class";
+}
+
+<div class="p-4 container">
+    <div class="row p-4">
+        <div class="col-md-12">
+            <h3>Add new Class</h3>
+        </div>
+    </div>
+    <div class="row p-4">
+        <div class="col-md-6">
+            <form asp-controller="Class" asp-action="Add" method="post">
+                <div class="mb-3">
+                    <label for="ClassName" class="form-label fw-bold">Class Name</label>
+                    <input asp-for="ClassName" type="text" class="form-control">
+                    <span asp-validation-for="ClassName" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

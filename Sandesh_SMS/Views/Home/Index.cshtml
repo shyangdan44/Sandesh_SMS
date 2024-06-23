@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Student Management System</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Student</h5>
+                    <p class="card-text">Get Student details</p>
+                    <a asp-controller="Student" asp-action="Index" class="btn btn-dark">Click here!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Class</h5>
+                    <p class="card-text">Get class details</p>
+                    <a asp-controller="Class" asp-action="Index" class="btn btn-dark">Click here!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Course</h5>
+                    <p class="card-text">Get Course details</p>
+                    <a asp-controller="Course" asp-action="Index" class="btn btn-dark">Click here!</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
